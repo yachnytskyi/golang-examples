@@ -34,8 +34,8 @@ func main() {
 	fmt.Println("After updateUserByValue:", user) // Original remains unchanged
 
 	fmt.Println("\nBefore updateUserByValueAndReturn:", user)
-	updateUserByValue(user)                       // Passing by value (copy)
-	fmt.Println("After updateUserByValueAndReturn:", user) // We see the change
+	userUpdated := updateUserByValueAndReturn(user)                       // Passing by value (copy)
+	fmt.Println("After updateUserByValue:", userUpdated) // We see the change
 
 	fmt.Println("\nBefore updateUserByPointer:", user)
 	updateUserByPointer(&user)                      // Passing by pointer
